@@ -5,5 +5,14 @@ let users = [
     {id: 15, name: "Begzod", age: 21, salary: 200, isActive: false}
 ]
 
-let per = users.map(salom => (salom.salary + ((salom.salary / 100) * 15)))
+let active = users.filter(item => item.isActive == true)
+for (let i = 0; i < active.length; i++) {
+    console.log(active[i].name)
+}
+
+let per = users.map(item => item.salary + item.salary * 0.15)
 console.log(per)
+
+
+let total = users.reduce((yiguvchi, hozirgi) => yiguvchi + hozirgi.salary, 0)
+console.log("total" + ' ' + total);
