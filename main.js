@@ -5,7 +5,5 @@ let users = [
     {id: 15, name: "Begzod", age: 21, salary: 200, isActive: false}
 ]
 
-let filtered = users.filter(sharabara => sharabara.isActive == true)
-for(let i = 0; i < filtered.length; i++) {
-    console.log(filtered[i].name)
-}
+let per = users.map(salom => (salom.salary + ((salom.salary / 100) * 15)))
+console.log(per)
